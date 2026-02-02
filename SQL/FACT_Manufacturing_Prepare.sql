@@ -1,6 +1,6 @@
 --Select for scrap products
 
---INSERT INTO [DokumentStavke]
+--INSERT INTO [PrometStavkePro]
 SELECT 
 	[PrStZapisa] AS SifraSDok,
 	[PrStDokumenta] AS BrojDokumentaSDok,
@@ -21,7 +21,7 @@ ORDER BY PrDatTrans
 
 --Select for products
     
---INSERT INTO [DokumentStavke]
+--INSERT INTO [PrometStavkeSka]
 SELECT 
 	[PrStZapisa] AS SifraSDok,
 	[PrStDokumenta] AS BrojDokumentaSDok,
