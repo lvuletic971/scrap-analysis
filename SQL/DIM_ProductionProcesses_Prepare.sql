@@ -1,6 +1,6 @@
---Select for dwarehouse
+--Select for production processes
 
---INSERT INTO [KG].[dbo].[Skladiste]
+--INSERT INTO [RadniProcesi]
 ;WITH cte AS (
     SELECT 
         DpSifra AS SifraRP, 
@@ -10,10 +10,9 @@
         ROW_NUMBER() OVER (PARTITION BY DpSifMp, DpSifDelovnegaCentra ORDER BY DpNaziv) AS rn,
         COUNT(*) OVER (PARTITION BY DpSifMp, DpSifDelovnegaCentra) AS cnt
     FROM 
-         [dondonlargo].[KRAGUJEVAC].[dbo].delpostopek
+         delpostopek
 )
-
-INSERT INTO RadniPostupci(SifraRP, NazivRP, MatPodRP,  RadCenRP)
+--INSERT INTO RadniPostupci(SifraRP, NazivRP, MatPodRP,  RadCenRP)
 SELECT
     SifraRP, 
     NazivRP, 
