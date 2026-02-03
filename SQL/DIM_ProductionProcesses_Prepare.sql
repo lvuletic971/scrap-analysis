@@ -1,4 +1,4 @@
---Select for production processes
+--Isolating the work process that led to product waste, for a combination of one item and one work center
 
 --INSERT INTO [RadniProcesi]
 ;WITH cte AS (
@@ -21,4 +21,4 @@ SELECT
 FROM 
     cte
 WHERE 
-    cnt = 1 OR (cnt > 1 AND rn = 1); MatPodSDok = MatPodRP
+    cnt = 1 OR (cnt > 1 AND rn = 1);
