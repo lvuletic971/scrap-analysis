@@ -12,37 +12,33 @@ The solution covers the complete data pipeline:
 
 The data warehouse is designed using a star schema.
 It consists of a central fact table that stores manufacturing transactions, surrounded by multiple dimensions that describe products, production processes,
-errors, time, and 
+errors, time.
 
 The complete data model is available in the `/docs` folder.
 
 ## SQL Preparation Layer
 
-The `/SQL` folder contains SQL scripts used for preparing source data
-prior to the ETL process.
+The `/SQL` folder contains SQL scripts used for preparing source data prior to the ETL process.
 
 Each script focuses on a specific dimension or fact and performs:
-- filtering of relevant records,
-- deduplication logic,
-- aggregation where needed,
+- filtering of relevant records
+- deduplication logic
+- aggregation where needed
 - and preparation of clean datasets for loading into the data warehouse.
 
 ### SQL Scripts Overview
 
 - **dim_article_prepare.sql**  
-  Prepares article-related data, including finished and semi-finished products,
-  classifications, and cost prices.
+  Prepares article-related data, including finished and semi-finished products, classifications and cost prices.
 
 - **dim_error_prepare.sql**  
   Extracts error types and error causes related to manufacturing waste.
 
 - **dim_production_process_prepare.sql**  
-  Identifies production processes and resolves duplicates using window functions
-  to ensure one process per item and work center.
+  Identifies production processes and resolves duplicates using window functions to ensure one process per item and work center.
 
 - **fact_manufacturing_prepare.sql**  
-  Prepares manufacturing transactions and separates waste (scrap) records
-  from regular production records.
+  Prepares manufacturing transactions and separates waste (scrap) records from regular production records.
 
 ## ETL Process (SSIS)
 
