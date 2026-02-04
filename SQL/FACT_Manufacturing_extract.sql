@@ -1,4 +1,14 @@
---Separation of waste items in the overall observed period of 3 years
+/*
+Purpose:
+Preparation of source data for the manufacturing fact table.
+
+This script extracts production transactions for the observed period and separates waste (scrap) records from regular production records.
+Waste records include additional attributes related to error type and error cause.
+*/
+
+------------------------------------------------------------
+-- 1. Waste (scrap) production transactions
+------------------------------------------------------------
 
 --INSERT INTO [PrometStavkePro]
 SELECT 
@@ -15,11 +25,13 @@ FROM [Promet] pr
 LEFT JOIN PrometTransPos pos on pr.PrStPrTrans = pos.PrTpStDokumenta
 WHERE PrPrevKol >= 0 
 AND PrSifVrstePrometa = 'SKA'
-AND PrDatTrans >= '2021-10-01' AND PrDatTrans <= '2023-12-31' 
+AND PrDatTrans BETWEEN '2021-01-01' AND '2023-12-31'  
 GROUP BY PrStZapisa, PrStDokumenta, PrDatTrans, PrSifMp, PrSifStroskMesta, PrSifVrstePrometa, PrTpVrstaNapake, PrTpVzrokNapake
-ORDER BY PrDatTrans
+--ORDER BY PrDatTrans
 
---Separation of other manufactured items that are not waste in the observed period
+------------------------------------------------------------
+-- 2. Regular production transactions (non-waste)
+------------------------------------------------------------
     
 --INSERT INTO [PrometStavkeSka]
 SELECT 
@@ -33,7 +45,7 @@ SELECT
 FROM [Promet] pr
 LEFT JOIN PrometTransPos pos on pr.PrStPrTrans = pos.PrTpStDokumenta
 WHERE PrPrevKol >= 0 
-AND (PrSifVrstePrometa = 'PPP' OR PrSifVrstePrometa = 'PGP') 
-AND PrDatTrans >= '2021-10-01' AND PrDatTrans <= '2023-12-31' 
+AND PrSifVrstePrometa IN ('PPP', 'PGP') 
+AND PrDatTrans BETWEEN '2021-01-01' AND '2023-12-31' 
 GROUP BY PrStZapisa, PrStDokumenta, PrDatTrans,PrSifMp, PrSifStroskMesta, PrSifVrstePrometa
-ORDER BY PrDatTrans
+--ORDER BY PrDatTrans
