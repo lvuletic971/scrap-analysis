@@ -22,7 +22,7 @@ SELECT
 	PrTpVrstaNapake AS GreskaSDok,
 	PrTpVzrokNapake AS UzrokGreskeSDok
 FROM [Promet] pr
-LEFT JOIN PrometTransPos pos on pr.PrStPrTrans = pos.PrTpStDokumenta
+LEFT JOIN PrometTransPos pos ON pr.PrStPrTrans = pos.PrTpStDokumenta
 WHERE PrPrevKol >= 0 
 AND PrSifVrstePrometa = 'SKA'
 AND PrDatTrans BETWEEN '2021-01-01' AND '2023-12-31'  
@@ -43,9 +43,22 @@ SELECT
 	PrSifStroskMesta AS MestTroskaSDok,
 	[PrSifVrstePrometa] AS VrstaPrometaSDok
 FROM [Promet] pr
-LEFT JOIN PrometTransPos pos on pr.PrStPrTrans = pos.PrTpStDokumenta
+LEFT JOIN PrometTransPos pos ON pr.PrStPrTrans = pos.PrTpStDokumenta
 WHERE PrPrevKol >= 0 
 AND PrSifVrstePrometa IN ('PPP', 'PGP') 
 AND PrDatTrans BETWEEN '2021-01-01' AND '2023-12-31' 
 GROUP BY PrStZapisa, PrStDokumenta, PrDatTrans,PrSifMp, PrSifStroskMesta, PrSifVrstePrometa
 --ORDER BY PrDatTrans
+
+
+SELECT 
+	b1.DatumSDok, 
+	b1.BrojDokumentaSDok, 
+	b1.ArtiklSDok, 
+	b1.KolicinaPrimljenaSDok AS ProizvedenaKolicina, 
+	COALESCE(b2.KolicinaPrimljenaSDok, 0) AS Skart
+FROM [PrometStavkePro] AS b1 
+LEFT JOIN PrometStavkeSka AS b2 ON b1.DatumSDok = b2.DatumSDok 
+AND b1.BrojDokumentaSDok = b2.BrojDokumentaSDok
+AND b1.ArtiklSDok = b2.ArtiklSDok 
+---ORDER BY 2,3
