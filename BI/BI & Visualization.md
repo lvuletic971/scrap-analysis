@@ -1,10 +1,11 @@
+## BI & Visualization
 
 This folder contains analytical dashboards created in Tableau for exploring manufacturing waste and production efficiency.
 
 The visualizations are built on top of the data warehouse model and focus on identifying trends, root causes, and key performance indicators
 related to production waste.
 
-Key Analytical Insights
+### Key Analytical Insights
 
 The dashboards highlight several important findings:
 
@@ -18,7 +19,7 @@ The dashboards highlight several important findings:
 
 - the waste percentage exceeds the acceptable 1% threshold in later years, signaling declining production efficiency
 
-Purpose of the BI Layer
+### Purpose of the BI Layer
 
 The BI layer enables:
 
@@ -32,6 +33,6 @@ The BI layer enables:
 
 These insights support data-driven operational and strategic decisions in manufacturing.
 
-Tool Used
+### Tool Used
 
 Tableau for dashboard design and visualization
