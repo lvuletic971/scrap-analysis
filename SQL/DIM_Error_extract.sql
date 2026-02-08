@@ -1,6 +1,6 @@
 /*
 Purpose:
-Preparation of source data for error-related dimensions.
+Preparation of source data in staging tables used for building the data warehouse dimensions.
 
 This script extracts error types and error causes related to production waste.
 The data is used to populate two dimensions in the data warehouse:
