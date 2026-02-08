@@ -43,11 +43,9 @@ Tableau for dashboard design and visualization
 
 ### 1. Waste Trend Over Time
 
-This visualization shows the relationship between total production
-and manufacturing waste across the observed years.
+This visualization shows the relationship between total production and manufacturing waste across the observed years.
 
-The chart reveals a **continuous increase in waste**
-despite stable or slightly declining production,
+The chart reveals a **continuous increase in waste** despite stable or slightly declining production,
 indicating **declining production efficiency**.
 
 ![Waste Trend](waste_trend.png)
@@ -58,8 +56,7 @@ indicating **declining production efficiency**.
 
 This view identifies **products contributing the most to total waste**.
 
-Some products generate **high waste despite low production volume**,
-which suggests **process or quality issues rather than scale effects**.
+Some products generate **high waste despite low production volume**, which suggests **process or quality issues rather than scale effects**.
 
 ![Top Waste Products](top_products_waste.png)
 
@@ -67,8 +64,7 @@ which suggests **process or quality issues rather than scale effects**.
 
 ### 3. Root Causes of Waste
 
-This analysis highlights the **dominant technical and machinery-related causes**
-behind manufacturing waste.
+This analysis highlights the **dominant technical and machinery-related causes** behind manufacturing waste.
 
 The findings indicate potential need for **equipment maintenance or replacement**.
 
@@ -78,11 +74,9 @@ The findings indicate potential need for **equipment maintenance or replacement*
 
 ### 4. Waste Percentage vs Acceptable Threshold
 
-This KPI view compares the **actual waste percentage**
-with the **acceptable 1% production threshold**.
+This KPI view compares the **actual waste percentage** with the **acceptable 1% production threshold**.
 
-Later years clearly exceed the limit,
-signaling **reduced operational efficiency**.
+Later years clearly exceed the limit, signaling **reduced operational efficiency**.
 
 ![Waste KPI](waste_percentage_kpi.png)
 
