@@ -26,7 +26,7 @@ All scripts follow the same workflow:
 
 ### DIM_Article_extract.sql
 
-- prepares data for the Article dimension:
+Prepares data for the Article dimension:
 
 - finished and semi-finished products
 
@@ -44,7 +44,7 @@ All scripts follow the same workflow:
 
 ### FACT_Manufacturing_extract.sql
 
-- prepares the manufacturing fact dataset by:
+Prepares the manufacturing fact dataset by:
 
 - separating scrap vs. regular production
 
