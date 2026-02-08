@@ -58,7 +58,7 @@ This view identifies **products contributing the most to total waste**.
 
 Some products generate **high waste despite low production volume**, which suggests **process or quality issues rather than scale effects**.
 
-![Top Waste Products](top_products_waste.png)
+![Top Waste Products](Top Waste Products.png)
 
 ---
 
