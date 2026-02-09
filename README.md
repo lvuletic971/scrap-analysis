@@ -24,14 +24,13 @@ surrounded by multiple **dimension tables** describing:
 - error types and causes  
 - time  
 
-The complete data model and schema diagram are available in the `/DOCS` folder.
+The complete data model and schema diagram are available in the [ime](./DOCS)` folder.
 
 ---
 
 ## Source Data & Staging Approach
 
-To avoid performance impact on the **OLTP production system**,  
-all required transactional and master data is first **extracted into staging tables**
+To avoid performance impact on the **OLTP production system**, all required transactional and master data is first **extracted into staging tables**
 located in a **separate database**.
 
 These staging tables serve as:
@@ -40,15 +39,13 @@ These staging tables serve as:
 - an isolation layer between OLTP and the data warehouse  
 - a place for initial filtering, aggregation, and cleansing  
 
-Only **prepared staging data** is later used for loading
-dimension and fact tables in the data warehouse.
+Only **prepared staging data** is later used for loading dimension and fact tables in the data warehouse.
 
 ---
 
 ## SQL Preparation Layer
 
-The `/SQL` folder contains SQL scripts used for preparing **staging datasets**
-prior to the ETL process.
+The [ime](./SQL) folder contains SQL scripts used for preparing **staging datasets** prior to the ETL process.
 
 Each script focuses on a specific **dimension or fact domain** and performs:
 
@@ -92,7 +89,7 @@ Due to their complexity, ETL packages for:
 - the **Article dimension**
 - the **Manufacturing Fact table**
 
-are documented in additional detail within the project.
+are documented in additional detail within the project [ime](./ETL).
 
 ---
 
@@ -106,7 +103,7 @@ Dashboards and visualizations enable analysis of:
 - waste distribution by product and production unit  
 - key performance indicators related to manufacturing efficiency  
 
-Example reports and dashboards are available in the `/BI` folder.
+Example reports and dashboards are available in the [ime](./BI) folder.
 
 ---
 
