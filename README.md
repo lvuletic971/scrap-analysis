@@ -24,7 +24,7 @@ surrounded by multiple **dimension tables** describing:
 - error types and causes  
 - time  
 
-The complete data model and schema diagram are available in the [DOCS](./DOCS)` folder.
+The complete data model and schema diagram are available in the [DOCS](./DOCS) folder.
 
 ---
 
