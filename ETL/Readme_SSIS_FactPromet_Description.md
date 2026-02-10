@@ -1,7 +1,5 @@
 ## FactPromet – ETL process
 
-The ETL process for FactPromet prepares and loads manufacturing transaction data into the central fact table of the data warehouse.
-
 The process begins with an Execute SQL Task that ensures the target fact table structure is ready for loading.
 This is followed by a Data Flow Task where production and waste transactions are extracted, transformed, and merged into a unified analytical dataset.
 
@@ -31,7 +29,7 @@ Key transformations in the Data Flow include:
 
   - Product dimension
 
-  -  Date dimension
+  - Date dimension
 
   - Production process dimension
 
@@ -41,13 +39,13 @@ Key transformations in the Data Flow include:
 
 - Calculation of analytical measures:
 
-  - Produced quantity
+  - produced quantity
 
-  - Waste quantity
+  - waste quantity
 
-  - Waste percentage
+  - waste percentage
 
-  - Waste value
+  - waste value
 
 Goal
 
