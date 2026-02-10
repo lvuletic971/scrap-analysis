@@ -43,7 +43,7 @@ FROM KlasOzn
 -- 3. Cost prices from price list
 ------------------------------------------------------------
 	
---INSERT INTO [Cenovnik]
+--INSERT INTO [KG].[dbo].[Cenovnik]
 SELECT 
 	CnStZapisa AS SifraC,
 	CnSifMp AS ArtiklC,
