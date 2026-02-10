@@ -24,7 +24,7 @@ For each combination of item and work center, only one production process is sel
     INNER JOIN 
          DelovniCentri on DpSifDelovnegaCentra = DcSifra
 )
---INSERT INTO [KG].[dbo].RadniPostupci (SifraRPostupka, NazivRPostupka, MatPodRPpostupka, SifraRCentra, NazivRCentra)
+--INSERT INTO [KG].[dbo].RadniProcesi (SifraRPostupka, NazivRPostupka, MatPodRPpostupka, SifraRCentra, NazivRCentra)
 SELECT
     SifraRPostupka, 
     NazivRPostupka, 
