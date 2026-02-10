@@ -112,5 +112,5 @@ Example reports and dashboards are available in the [BI](./BI) folder.
 - SQL Server  
 - T-SQL  
 - SQL Server Integration Services (SSIS)  
-- Power BI / Tableau  
+- Tableau  
 - GitHub
