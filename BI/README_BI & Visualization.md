@@ -90,3 +90,13 @@ The results show higher waste levels in finished products, with a noticeable inc
 indicating an operational issue in the final production stage.
 
 ![Finished vs Semi Waste](Finished_vs_Semi_Waste.png)(Finished_vs_Semi_Waste.png)
+
+---
+
+### Conclusion
+
+The analysis reveals a growing trend of manufacturing waste, primarily driven by technical issues in the final production stages and most visible in finished toast products.
+
+These findings suggest the need for equipment maintenance, process optimization, and closer operational monitoring.
+
+Future work could include predictive waste modeling, may focus on advanced Power BI capabilities, including interactive dashboards, KPI monitoring, and automated reporting to further support data-driven decision making.
