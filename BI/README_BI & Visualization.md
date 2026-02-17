@@ -5,6 +5,8 @@ This folder contains analytical dashboards created in Tableau for exploring manu
 The visualizations are built on top of the data warehouse model and focus on identifying trends, root causes, and key performance indicators
 related to production waste.
 
+Dashboard labels are shown in the original language of the source system.
+
 ### Key Analytical Insights
 
 The dashboards highlight several important findings:
